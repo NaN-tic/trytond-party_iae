@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository contains the full
+     copyright notices and license terms. -->
+<tryton>
+    <data>
+        <!-- party.iae -->
+        <record model="ir.ui.view" id="party_iae_view_form">
+            <field name="model">party.iae</field>
+            <field name="type">form</field>
+            <field name="name">party_iae_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="party_iae_view_tree">
+            <field name="model">party.iae</field>
+            <field name="type">tree</field>
+            <field name="field_childs">childs</field>
+            <field name="name">party_iae_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="party_iae_view_list">
+            <field name="model">party.iae</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="10"/>
+            <field name="name">party_iae_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_party_iae_tree">
+            <field name="name">IAE</field>
+            <field name="res_model">party.iae</field>
+            <field name="domain">[('parent', '=', None)]</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_party_iae_tree_view1">
+            <field name="act_window" ref="act_party_iae_tree"/>
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="party_iae_view_tree"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_party_iae_tree_view2">
+            <field name="act_window" ref="act_party_iae_tree"/>
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="party_iae_view_form"/>
+        </record>
+
+        <record model="ir.action.act_window" id="act_party_iae_list">
+            <field name="name">IAE</field>
+            <field name="res_model">party.iae</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_party_iae_list_view1">
+            <field name="act_window" ref="act_party_iae_list"/>
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="party_iae_view_list"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_party_iae_list_view2">
+            <field name="act_window" ref="act_party_iae_list"/>
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="party_iae_view_form"/>
+        </record>
+
+        <record model="ir.model.access" id="access_party_iae">
+            <field name="model" search="[('model', '=', 'party.iae')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+
+        <record model="ir.model.access" id="access_party_iae_party_admin">
+            <field name="model" search="[('model', '=', 'party.iae')]"/>
+            <field name="group" ref="party.group_party_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+        <!-- party.party -->
+        <record model="ir.ui.view" id="party_view_form">
+            <field name="model">party.party</field>
+            <field name="inherit" ref="party.party_view_form"/>
+            <field name="name">party_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="party_view_list">
+            <field name="model">party.party</field>
+            <field name="inherit" ref="party.party_view_tree"/>
+            <field name="name">party_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_party_by_iae">
+            <field name="name">Parties by IAE</field>
+            <field name="res_model">party.party</field>
+            <field name="context">{'main_iae': Eval('active_id'), 'secondary_iaes': Eval('active_id')}</field>
+            <field name="domain">[['OR',('main_iae', 'child_of', [Eval('active_id')], 'parent'),('secondary_iae', 'child_of', [Eval('active_id')], 'parent')]]</field>
+        </record>
+        <record model="ir.action.keyword" id="act_party_by_iae_keyword1">
+            <field name="keyword">tree_open</field>
+            <field name="model">party.iae,-1</field>
+            <field name="action" ref="act_party_by_iae"/>
+        </record>
+
+        <!-- Menus -->
+        <menuitem id="menu_party_iae_tree" action="act_party_iae_tree"
+            parent="party.menu_party"/>
+        <menuitem id="menu_party_iae_list" action="act_party_iae_list"
+            parent="menu_party_iae_tree"/>
+    </data>
+</tryton>

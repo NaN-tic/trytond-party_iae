@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository contains the full
+     copyright notices and license terms. -->
+<form string="IAE">
+    <label name="name"/>
+    <field name="name"/>
+    <label name="parent"/>
+    <field name="parent"/>
+    <group id="code" colspan="4" col="10">
+        <label name="section"/>
+        <field name="section"/>
+        <label name="division"/>
+        <field name="division"/>
+        <label name="grouping"/>
+        <field name="grouping"/>
+        <label name="group"/>
+        <field name="group"/>
+        <label name="epigraph"/>
+        <field name="epigraph"/>
+    </group>
+    <field name="childs" colspan="4"/>
+</form>
+

@@ -1,0 +1,139 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:party.iae,childs:"
+msgid "Children"
+msgstr "Hijas"
+
+msgctxt "field:party.iae,create_date:"
+msgid "Create Date"
+msgstr "Fecha creación"
+
+msgctxt "field:party.iae,create_uid:"
+msgid "Create User"
+msgstr "Usuario creación"
+
+msgctxt "field:party.iae,division:"
+msgid "Division"
+msgstr "División"
+
+msgctxt "field:party.iae,epigraph:"
+msgid "Epigraph"
+msgstr "Epígrafe"
+
+msgctxt "field:party.iae,full_name:"
+msgid "Full Name"
+msgstr "Nombre completo"
+
+msgctxt "field:party.iae,group:"
+msgid "Group"
+msgstr "Grupo"
+
+msgctxt "field:party.iae,grouping:"
+msgid "Grouping"
+msgstr "Agrupación"
+
+msgctxt "field:party.iae,id:"
+msgid "ID"
+msgstr "Identificador"
+
+msgctxt "field:party.iae,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:party.iae,parent:"
+msgid "Parent"
+msgstr "Padre"
+
+msgctxt "field:party.iae,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:party.iae,section:"
+msgid "Section"
+msgstr "Sección"
+
+msgctxt "field:party.iae,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:party.iae,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:party.party,main_iae:"
+msgid "Main IAE"
+msgstr "IAE principal"
+
+msgctxt "field:party.party,secondary_iaes:"
+msgid "Secondary IAEs"
+msgstr "IAEs secundarias"
+
+msgctxt "field:party.party-party.iae,create_date:"
+msgid "Create Date"
+msgstr "Fecha creación"
+
+msgctxt "field:party.party-party.iae,create_uid:"
+msgid "Create User"
+msgstr "Usuario creación"
+
+msgctxt "field:party.party-party.iae,iae:"
+msgid "IAE"
+msgstr "IAE"
+
+msgctxt "field:party.party-party.iae,id:"
+msgid "ID"
+msgstr "Identificador"
+
+msgctxt "field:party.party-party.iae,party:"
+msgid "Party"
+msgstr "Tercero"
+
+msgctxt "field:party.party-party.iae,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:party.party-party.iae,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:party.party-party.iae,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "model:ir.action,name:act_party_by_iae"
+msgid "Parties by IAE"
+msgstr "Terceros por IAE"
+
+msgctxt "model:ir.action,name:act_party_iae_list"
+msgid "IAE"
+msgstr "IAE"
+
+msgctxt "model:ir.action,name:act_party_iae_tree"
+msgid "IAE"
+msgstr "IAE"
+
+msgctxt "model:ir.ui.menu,name:menu_party_iae_list"
+msgid "IAE"
+msgstr "IAE"
+
+msgctxt "model:ir.ui.menu,name:menu_party_iae_tree"
+msgid "IAE"
+msgstr "IAE"
+
+msgctxt "model:party.iae,name:"
+msgid "IAE"
+msgstr "IAE"
+
+msgctxt "model:party.party-party.iae,name:"
+msgid "Party - IAE"
+msgstr "Tercero - IAE"
+
+msgctxt "view:party.iae:"
+msgid "IAE"
+msgstr "IAE"
+
+msgctxt "view:party.party:"
+msgid "IAE"
+msgstr "IAE"

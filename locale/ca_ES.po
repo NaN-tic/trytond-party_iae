@@ -1,0 +1,139 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:party.iae,childs:"
+msgid "Children"
+msgstr "Filles"
+
+msgctxt "field:party.iae,create_date:"
+msgid "Create Date"
+msgstr "Data creació"
+
+msgctxt "field:party.iae,create_uid:"
+msgid "Create User"
+msgstr "Usuari creació"
+
+msgctxt "field:party.iae,division:"
+msgid "Division"
+msgstr "Divisió"
+
+msgctxt "field:party.iae,epigraph:"
+msgid "Epigraph"
+msgstr "Epígraf"
+
+msgctxt "field:party.iae,full_name:"
+msgid "Full Name"
+msgstr "Nom complet"
+
+msgctxt "field:party.iae,group:"
+msgid "Group"
+msgstr "Grup"
+
+msgctxt "field:party.iae,grouping:"
+msgid "Grouping"
+msgstr "Agrupació"
+
+msgctxt "field:party.iae,id:"
+msgid "ID"
+msgstr "Identificador"
+
+msgctxt "field:party.iae,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:party.iae,parent:"
+msgid "Parent"
+msgstr "Pare"
+
+msgctxt "field:party.iae,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:party.iae,section:"
+msgid "Section"
+msgstr "Secció"
+
+msgctxt "field:party.iae,write_date:"
+msgid "Write Date"
+msgstr "Data modificació"
+
+msgctxt "field:party.iae,write_uid:"
+msgid "Write User"
+msgstr "Usuari modificació"
+
+msgctxt "field:party.party,main_iae:"
+msgid "Main IAE"
+msgstr "IAE principal"
+
+msgctxt "field:party.party,secondary_iaes:"
+msgid "Secondary IAEs"
+msgstr "IAEs secundàries"
+
+msgctxt "field:party.party-party.iae,create_date:"
+msgid "Create Date"
+msgstr "Data creació"
+
+msgctxt "field:party.party-party.iae,create_uid:"
+msgid "Create User"
+msgstr "Usuari creació"
+
+msgctxt "field:party.party-party.iae,iae:"
+msgid "IAE"
+msgstr "IAE"
+
+msgctxt "field:party.party-party.iae,id:"
+msgid "ID"
+msgstr "Identificador"
+
+msgctxt "field:party.party-party.iae,party:"
+msgid "Party"
+msgstr "Tercer"
+
+msgctxt "field:party.party-party.iae,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:party.party-party.iae,write_date:"
+msgid "Write Date"
+msgstr "Data modificació"
+
+msgctxt "field:party.party-party.iae,write_uid:"
+msgid "Write User"
+msgstr "Usuari modificació"
+
+msgctxt "model:ir.action,name:act_party_by_iae"
+msgid "Parties by IAE"
+msgstr "Tercers per IAE"
+
+msgctxt "model:ir.action,name:act_party_iae_list"
+msgid "IAE"
+msgstr "IAE"
+
+msgctxt "model:ir.action,name:act_party_iae_tree"
+msgid "IAE"
+msgstr "IAE"
+
+msgctxt "model:ir.ui.menu,name:menu_party_iae_list"
+msgid "IAE"
+msgstr "IAE"
+
+msgctxt "model:ir.ui.menu,name:menu_party_iae_tree"
+msgid "IAE"
+msgstr "IAE"
+
+msgctxt "model:party.iae,name:"
+msgid "IAE"
+msgstr "IAE"
+
+msgctxt "model:party.party-party.iae,name:"
+msgid "Party - IAE"
+msgstr "Tercer - IAE"
+
+msgctxt "view:party.iae:"
+msgid "IAE"
+msgstr "IAE"
+
+msgctxt "view:party.party:"
+msgid "IAE"
+msgstr "IAE"
