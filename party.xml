@@ -27,7 +27,7 @@
         <record model="ir.action.act_window" id="act_party_iae_tree">
             <field name="name">IAE</field>
             <field name="res_model">party.iae</field>
-            <field name="domain">[('parent', '=', None)]</field>
+            <field name="domain" eval="[('parent', '=', None)]" pyson="1"/>
         </record>
         <record model="ir.action.act_window.view" id="act_party_iae_tree_view1">
             <field name="act_window" ref="act_party_iae_tree"/>
@@ -88,8 +88,9 @@
         <record model="ir.action.act_window" id="act_party_by_iae">
             <field name="name">Parties by IAE</field>
             <field name="res_model">party.party</field>
-            <field name="context">{'main_iae': Eval('active_id'), 'secondary_iaes': Eval('active_id')}</field>
-            <field name="domain">[['OR',('main_iae', 'child_of', [Eval('active_id')], 'parent'),('secondary_iae', 'child_of', [Eval('active_id')], 'parent')]]</field>
+            <field name="context" eval="{'main_iae': Eval('active_id'), 'secondary_iaes': Eval('active_id')}" pyson="1"/>
+            <field name="domain" eval="[['OR',('main_iae', 'child_of', [Eval('active_id')], 'parent'),('secondary_iae', 'child_of', [Eval('active_id')], 'parent')]]"
+                pyson="1"/>
         </record>
         <record model="ir.action.keyword" id="act_party_by_iae_keyword1">
             <field name="keyword">tree_open</field>
