@@ -2,6 +2,7 @@
 # copyright notices and license terms.
 from trytond.model import ModelSQL, ModelView, fields
 from trytond.pool import PoolMeta
+from trytond.transaction import Transaction
 
 __all__ = ['Iae', 'Party', 'PartyIae']
 __metaclass__ = PoolMeta
@@ -69,6 +70,10 @@ class Party:
         'Secondary IAEs')  # , domain=[
             # ('childs', '=', None),
             # ])
+
+    @staticmethod
+    def default_main_iae():
+        return Transaction().context.get('main_iae')
 
 
 class PartyIae(ModelSQL):

@@ -88,8 +88,8 @@
         <record model="ir.action.act_window" id="act_party_by_iae">
             <field name="name">Parties by IAE</field>
             <field name="res_model">party.party</field>
-            <field name="context" eval="{'main_iae': Eval('active_id'), 'secondary_iaes': Eval('active_id')}" pyson="1"/>
-            <field name="domain" eval="[['OR',('main_iae', 'child_of', [Eval('active_id')], 'parent'),('secondary_iae', 'child_of', [Eval('active_id')], 'parent')]]"
+            <field name="context" eval="{'main_iae': Eval('active_id')}" pyson="1"/>
+            <field name="domain" eval="[['OR',('main_iae', 'child_of', [Eval('active_id')], 'parent'),('secondary_iaes', 'child_of', [Eval('active_id')], 'parent')]]"
                 pyson="1"/>
         </record>
         <record model="ir.action.keyword" id="act_party_by_iae_keyword1">
