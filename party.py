@@ -5,7 +5,6 @@ from trytond.pool import PoolMeta
 from trytond.transaction import Transaction
 
 __all__ = ['Iae', 'Party', 'PartyIae']
-__metaclass__ = PoolMeta
 
 
 class Iae(ModelSQL, ModelView):
@@ -62,14 +61,11 @@ class Iae(ModelSQL, ModelView):
 
 class Party:
     __name__ = 'party.party'
+    __metaclass__ = PoolMeta
 
-    main_iae = fields.Many2One('party.iae', 'Main IAE')  # , domain=[
-            # ('childs', '=', None),
-            # ])
+    main_iae = fields.Many2One('party.iae', 'Main IAE')
     secondary_iaes = fields.Many2Many('party.party-party.iae', 'party', 'iae',
-        'Secondary IAEs')  # , domain=[
-            # ('childs', '=', None),
-            # ])
+        'Secondary IAEs')
 
     @staticmethod
     def default_main_iae():
