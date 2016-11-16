@@ -36,7 +36,7 @@ msgstr "Agrupación"
 
 msgctxt "field:party.iae,id:"
 msgid "ID"
-msgstr "Identificador"
+msgstr "ID"
 
 msgctxt "field:party.iae,name:"
 msgid "Name"
@@ -84,7 +84,7 @@ msgstr "IAE"
 
 msgctxt "field:party.party-party.iae,id:"
 msgid "ID"
-msgstr "Identificador"
+msgstr "ID"
 
 msgctxt "field:party.party-party.iae,party:"
 msgid "Party"
