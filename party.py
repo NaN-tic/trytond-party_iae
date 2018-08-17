@@ -1,13 +1,13 @@
 # The COPYRIGHT file at the top level of this repository contains the full
 # copyright notices and license terms.
-from trytond.model import ModelSQL, ModelView, fields
+from trytond.model import ModelSQL, ModelView, fields, tree
 from trytond.pool import PoolMeta
 from trytond.transaction import Transaction
 
 __all__ = ['Iae', 'Party', 'PartyIae']
 
 
-class Iae(ModelSQL, ModelView):
+class Iae(ModelSQL, ModelView, tree(separator='/')):
     '''IAE'''
     __name__ = 'party.iae'
     _order = 'section, division, grouping, group, epigraph'
@@ -23,11 +23,6 @@ class Iae(ModelSQL, ModelView):
     full_name = fields.Function(fields.Char('Full Name'),
         'get_full_name')
 
-    @classmethod
-    def validate(cls, iaes):
-        super(Iae, cls).validate(iaes)
-        cls.check_recursion(iaes, rec_name='name')
-
     def get_rec_name(self, name):
         code = self.section
         if self.division not in (None, ""):
@@ -39,7 +34,7 @@ class Iae(ModelSQL, ModelView):
         elif self.grouping:
             code += "-" + self.grouping
         if code:
-            return u"[%s] %s" % (code, self.name)
+            return "[%s] %s" % (code, self.name)
         return self.name
 
     @classmethod
@@ -54,14 +49,13 @@ class Iae(ModelSQL, ModelView):
         res = self.rec_name
         parent = self.parent
         while parent:
-            res = u'%s / %s' % (parent.name, res)
+            res = '%s / %s' % (parent.name, res)
             parent = parent.parent
         return res
 
 
-class Party:
+class Party(metaclass=PoolMeta):
     __name__ = 'party.party'
-    __metaclass__ = PoolMeta
 
     main_iae = fields.Many2One('party.iae', 'Main IAE')
     secondary_iaes = fields.Many2Many('party.party-party.iae', 'party', 'iae',
