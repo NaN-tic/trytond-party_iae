@@ -18,7 +18,7 @@ class Iae(ModelSQL, ModelView, tree(separator='/')):
     group = fields.Char('Group')
     epigraph = fields.Char('Epigraph')
     name = fields.Char('Name', required=True)
-    parent = fields.Many2One('party.iae', 'Parent', select=True)
+    parent = fields.Many2One('party.iae', 'Parent')
     childs = fields.One2Many('party.iae', 'parent', string='Children')
     full_name = fields.Function(fields.Char('Full Name'),
         'get_full_name')
@@ -70,6 +70,6 @@ class PartyIae(ModelSQL):
     'Party - IAE'
     __name__ = 'party.party-party.iae'
     party = fields.Many2One('party.party', 'Party', ondelete='CASCADE',
-        required=True, select=True)
+        required=True)
     iae = fields.Many2One('party.iae', 'IAE', ondelete='CASCADE',
-        required=True, select=True)
+        required=True)
