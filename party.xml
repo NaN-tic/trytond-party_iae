@@ -56,7 +56,7 @@
         </record>
 
         <record model="ir.model.access" id="access_party_iae">
-            <field name="model" search="[('model', '=', 'party.iae')]"/>
+            <field name="model">party.iae</field>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="False"/>
             <field name="perm_create" eval="False"/>
@@ -64,7 +64,7 @@
         </record>
 
         <record model="ir.model.access" id="access_party_iae_party_admin">
-            <field name="model" search="[('model', '=', 'party.iae')]"/>
+            <field name="model">party.iae</field>
             <field name="group" ref="party.group_party_admin"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
